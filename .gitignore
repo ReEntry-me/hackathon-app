@@ -1,0 +1,6 @@
+.meteor/local
+.idea/*
+node_modules
+private/build
+settings.json
+node_modules
