@@ -71,6 +71,7 @@ natestrauser:animate-css
 johnantoni:meteor-normalize
 ostrio:templatehelpers
 semantic:ui-css
+richsilv:semantic-ui-modal
 standard-minifier-css@1.3.2
 standard-minifier-js@1.2.1
 simple:dev-error-overlay
@@ -84,9 +85,9 @@ numeral:numeral
 255kb:meteor-status
 aldeed:autoform
 jeremy:selectize
-chhib:selectize-bootstrap-3
 comerc:autoform-selectize
-peppelg:bootstrap-3-modal
+fabienb4:autoform-semantic-ui
+lukemadera:autoform-googleplace
 
 # Jobs
 vsivsi:job-collection

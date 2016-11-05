@@ -1,28 +1,41 @@
 export default {
     address: new SimpleSchema({
-        address1: {
-            type: String,
-            optional: true
+        fullAddress: {
+            type: String
         },
-        address2: {
+        lat: {
+            type: Number,
+            decimal: true
+        },
+        lng: {
+            type: Number,
+            decimal: true
+        },
+        geometry: {
+            type: Object,
+            blackbox: true
+        },
+        placeId: {
+            type: String
+        },
+        street: {
             type: String,
-            optional: true
+            max: 100
         },
         city: {
             type: String,
-            optional: true
+            max: 50
         },
         state: {
             type: String,
-            optional: true
+            regEx: /^A[LKSZRAEP]|C[AOT]|D[EC]|F[LM]|G[AU]|HI|I[ADLN]|K[SY]|LA|M[ADEHINOPST]|N[CDEHJMVY]|O[HKR]|P[ARW]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY]$/
         },
-        postCode: {
+        zip: {
             type: String,
-            optional: true
+            regEx: /^[0-9]{5}$/
         },
         country: {
-            type: String,
-            optional: true
+            type: String
         }
     })
 };

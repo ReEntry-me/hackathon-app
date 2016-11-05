@@ -1,0 +1,42 @@
+<template name="resources">
+    <h1>resources Component</h1>
+</template>
+
+<template name="resourceEdit">
+	
+	<div class="header">
+    	{{mode}} Resource
+	</div>
+	<div class="ui segment">
+    	{{#autoForm collection=Resources id="resourceEditForm" type=type}}
+            <div class="ui teal ribbon label">Name</div>
+            <p>{{> afQuickField name="name" label=false}}</p>
+
+            <div class="ui teal ribbon label">Description</div>
+            <p>{{> afQuickField name="description" label=false}}</p>
+
+            <div class="ui teal ribbon label">Address</div>
+            <p>{{> afQuickField name="address" type="googleplace" opts=optsGoogleplace label=false}}</p>
+
+            <div class="ui teal ribbon label">Website</div>
+            <p>{{> afQuickField name="website" label=false}}</p>
+
+            <div class="ui teal ribbon label">Organization</div>
+            <p>{{> afQuickField name="organization" label=false}}</p>
+
+            <div class="ui teal ribbon label">Conditions</div>
+            <p>{{> afQuickField name="conditions" label=false}}</p>
+
+            <button class="ui button green submit">{{mode}} Resource</button>
+            <button class="ui button red cancel">Cancel</button>
+        {{/autoForm}}
+    </div>
+</template>
+
+<template name="resourceEditButton">
+    <button class="ui button edit">Edit Resource</button>
+</template>
+
+<template name="resourceAddButton">
+    <button class="ui button add">Add Resource</button>
+</template>

@@ -28,7 +28,6 @@ caching-compiler@1.1.8
 caching-html-compiler@1.0.7
 callback-hook@1.0.10
 check@1.2.4
-chhib:selectize-bootstrap-3@0.0.1
 chrismbeckett:toastr@2.1.2_1
 chriswessels:hammer@4.0.2
 cmather:handlebars-server@2.0.0
@@ -50,6 +49,7 @@ ecmascript-runtime@0.3.15
 ejson@1.0.13
 email@1.1.18
 es5-shim@4.6.15
+fabienb4:autoform-semantic-ui@0.9.3
 fastclick@1.0.13
 flemay:less-autoprefixer@1.2.0
 fortawesome:fontawesome@4.7.0
@@ -73,6 +73,7 @@ less@2.7.6
 livedata@1.0.18
 localstorage@1.0.12
 logging@1.1.16
+lukemadera:autoform-googleplace@1.0.7
 matb33:collection-hooks@0.8.4
 mdg:reload-on-resume@1.0.4
 mdg:validation-error@0.5.1
@@ -97,7 +98,6 @@ observe-sequence@1.0.14
 ongoworks:security@2.0.1
 ordered-dict@1.0.9
 ostrio:templatehelpers@1.1.3
-peppelg:bootstrap-3-modal@1.0.4
 practicalmeteor:mocha-core@1.0.1
 promise@0.8.8
 raix:eventemitter@0.1.3
@@ -107,6 +107,7 @@ reactive-dict@1.1.8
 reactive-var@1.0.11
 reload@1.1.11
 retry@1.0.9
+richsilv:semantic-ui-modal@1.1.1
 routepolicy@1.0.12
 semantic:ui-css@1.12.3
 service-configuration@1.0.11
