@@ -4,3 +4,4 @@ node_modules
 private/build
 settings.json
 node_modules
+token-build.json

@@ -1,4 +1,10 @@
 {
+    "galaxy.meteor.com": {
+        "env": {
+            "ROOT_URL": "https://reentry.me",
+            "MONGO_URL": "mongodb://username:password@server:port/database"
+        }
+    },
     "orion-cli": {
         "profile": "default",
         "config": "private/orion-config.json"
