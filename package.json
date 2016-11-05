@@ -1,7 +1,7 @@
 {
-  "name": "meteor-boilerplate",
+  "name": "reentry.me",
   "version": "1.0.0",
-  "description": "This boilerplate is here to give you a simple starting point for your meteor projects.",
+  "description": "Connecting parolees with resources",
   "main": "index.js",
   "dependencies": {
     "bcrypt": "^0.8.7"
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matteodem/meteor-boilerplate.git"
+    "url": "git+https://github.com/dhrubins/reentry.me.git"
   },
-  "author": "Matteo De Micheli",
+  "author": "Dan Rubins",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matteodem/meteor-boilerplate/issues"
+    "url": "https://github.com/dhrubins/reentry.me/issues"
   },
-  "homepage": "https://github.com/matteodem/meteor-boilerplate#readme"
+  "homepage": "https://github.com/dhrubins/reentry.me#readme"
 }
