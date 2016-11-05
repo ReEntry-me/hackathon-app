@@ -46,3 +46,4 @@ standard-minifier-js@1.2.1
 simple:dev-error-overlay
 shell-server@0.2.1
 dispatch:mocha-phantomjs
+fortawesome:fontawesome
