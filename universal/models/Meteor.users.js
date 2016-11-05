@@ -2,7 +2,7 @@ const emailsSchema = new SimpleSchema({
     address: {
         type: String,
         label: 'Address',
-        optional: false,
+        optional: true,
         regEx: SimpleSchema.RegEx.Email,
         min: 3,
         max: 100
@@ -10,7 +10,7 @@ const emailsSchema = new SimpleSchema({
     verified: {
         type: Boolean,
         label: 'Verified',
-        optional: false,
+        optional: true,
         defaultValue: false
     }
 });
@@ -19,12 +19,12 @@ const profileSchema = new SimpleSchema({
     firstName: {
         type: String,
         label: 'First Name',
-        optional: false
+        optional: true
     },
     lastName: {
         type: String,
         label: 'Last Name',
-        optional: false
+        optional: true
     },
     jobTitle: {
         type: String,
@@ -46,7 +46,7 @@ const profileSchema = new SimpleSchema({
 Meteor.users.attachSchema(
     new SimpleSchema({
         emails: {
-            type: emailsSchema,
+            type: [emailsSchema],
             label: 'Emails',
             optional: true
         },

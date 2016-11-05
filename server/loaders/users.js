@@ -1,11 +1,9 @@
 const users = [
   {
-    username: 'admin',
     email: 'admin@test.com',
     password: 'supersecret'
   },
   {
-    username: 'testuser',
     email: 'test@test.com',
     password: 'testpassword'
   }
@@ -13,7 +11,7 @@ const users = [
 
 export default function () {
   users.forEach(function (user) {
-    if (typeof Meteor.users.findOne({ username : user.username }) !== 'object') {
+    if (typeof Meteor.users.findOne({ 'emails.address' : user.email }) !== 'object') {
       Accounts.createUser(user);
     }
   });
