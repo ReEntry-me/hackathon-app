@@ -15,36 +15,73 @@ es5-shim@4.6.15                # ECMAScript 5 compatibility for older browsers.
 ecmascript@0.5.9              # Enable ECMAScript2015+ syntax in app code
 
 # Core Packages
-
 underscore@1.0.10
-accounts-password@1.3.1
-audit-argument-checks@1.0.7
-fastclick@1.0.13
-browser-policy@1.0.9
 logging@1.1.16
 reload@1.1.11
 random@1.0.10
 ejson@1.0.13
 spacebars@1.0.12
-check@1.2.4
 reactive-dict@1.1.8
 
-# Community Packages
+# Accounts
+accounts-password@1.3.1
+artwells:accounts-guest
+alanning:roles
 
-flemay:less-autoprefixer
-aldeed:collection2
+# Security
+check@1.2.4
+audit-argument-checks
+ulexus:check-patterns
+browser-policy@1.0.9
+ddp-rate-limiter
+ongoworks:security@2.0.1
+
+# Router & Layout
 kadira:flow-router
 kadira:blaze-layout
 useraccounts:semantic-ui
-natestrauser:animate-css
+
+# Collections
+aldeed:collection2
+matb33:collection-hooks
 dburles:collection-helpers
+
+# SEO
+gadicohen:robots-txt
+gadicohen:sitemaps
+
+# Mobile
+fastclick@1.0.13
+mobile-status-bar
+mdg:reload-on-resume
+chriswessels:hammer
+
+# Email
+email
+gfk:mailgun-api
+yogiben:pretty-email
+
+# Testing / Debug
+dispatch:mocha-phantomjs
+shell-server@0.2.1
+
+# UI Core
+flemay:less-autoprefixer
+natestrauser:animate-css
 johnantoni:meteor-normalize
 ostrio:templatehelpers
 semantic:ui-css
 standard-minifier-css@1.3.2
 standard-minifier-js@1.2.1
 simple:dev-error-overlay
-shell-server@0.2.1
-dispatch:mocha-phantomjs
+
+# UI components
 fortawesome:fontawesome
-artwells:accounts-guest
+copleykj:livestamp
+chrismbeckett:toastr
+momentjs:moment
+numeral:numeral
+255kb:meteor-status
+
+# Jobs
+vsivsi:job-collection
