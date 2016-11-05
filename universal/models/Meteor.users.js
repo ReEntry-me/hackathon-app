@@ -1,6 +1,4 @@
 
-const Meteor.users = new Mongo.Collection('Meteor.users');
-
 Meteor.users.attachSchema(
     new SimpleSchema({
     title: {
