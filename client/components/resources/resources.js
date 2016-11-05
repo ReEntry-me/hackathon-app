@@ -22,6 +22,18 @@ export default function(Template) {
         }
     });
 
+    Template['resourceEditLocations'].helpers({
+    	optsGoogleplace: function() {
+            return {
+                type: 'googleUI',
+                stopTimeoutOnKeyup: false,
+                googleOptions: {
+                  componentRestrictions: { country:'us' }
+                }
+            }
+        }
+    });
+
     Template['resourceEditButton'].events({
         'click .edit': () => SemanticModal.generalModal('resourceEdit', { _id: 'foo' })
     });

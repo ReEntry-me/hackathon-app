@@ -18,6 +18,9 @@
             <div class="ui teal ribbon label">Address</div>
             <p>{{> afQuickField name="address" type="googleplace" opts=optsGoogleplace label=false}}</p>
 
+            <div class="ui teal ribbon label">Area Served</div>
+            <p>{{> afQuickField name="areaServed" label=false}}</p>
+
             <div class="ui teal ribbon label">Website</div>
             <p>{{> afQuickField name="website" label=false}}</p>
 
@@ -31,6 +34,10 @@
             <button class="ui button red cancel">Cancel</button>
         {{/autoForm}}
     </div>
+</template>
+
+<template name="resourceEditLocations">
+	{{> afQuickField name="location" type="googleplace" opts=optsGoogleplace class='lm-autoform-google-place-input' label=false}}
 </template>
 
 <template name="resourceEditButton">

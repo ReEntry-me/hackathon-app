@@ -12,6 +12,16 @@ const organizationSchema = new SimpleSchema({
     }
 })
 
+const locations = new SimpleSchema({
+    address: {
+        type: commonSchemas.location,
+        optional: true,
+        autoform: {
+            type: 'googleplace'
+        }
+    }
+})
+
 Resources.attachSchema(
     new SimpleSchema({
         name: {
@@ -22,7 +32,11 @@ Resources.attachSchema(
             optional: true
         },
         address: {
-            type: [commonSchemas.address],
+            type: commonSchemas.location,
+            optional: true
+        },
+        areaServed: {
+            type: [locations],
             optional: true
         },
         website: {

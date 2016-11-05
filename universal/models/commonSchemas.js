@@ -1,5 +1,5 @@
 export default {
-    address: new SimpleSchema({
+    location: new SimpleSchema({
         fullAddress: {
             type: String
         },
