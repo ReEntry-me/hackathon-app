@@ -1,4 +1,4 @@
-# tech-for-justice
+# ReEntry.me
 
 Read through the [GUIDE.md](https://github.com/matteodem/meteor-boilerplate/blob/master/GUIDE.md) or checkout the repository locally for more information.
 
