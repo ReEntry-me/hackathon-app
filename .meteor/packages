@@ -82,6 +82,10 @@ chrismbeckett:toastr
 momentjs:moment
 numeral:numeral
 255kb:meteor-status
+aldeed:autoform
+jeremy:selectize
+chhib:selectize-bootstrap-3
+comerc:autoform-selectize
 
 # Jobs
 vsivsi:job-collection
