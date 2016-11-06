@@ -1,4 +1,5 @@
 import Markers from '../../../universal/models/Markers.js';
+import Resources from '../../../universal/models/Resources.js';
 
 export default function(Template) {
     var MAP_ZOOM = 12;
@@ -30,6 +31,24 @@ export default function(Template) {
         },
         mapMargin: function() {
 	        return $('#header').height() || 36;
+        },
+        resources: function() {
+            var r = Resources.find({'address.lat':{$exists: true}, 'address.lng':{$exists: true}}).fetch();
+            return r;
+        },
+        triggerMapRebuild: function() {
+            Meteor.call('clearMap');
+            var r = Resources.find({'address.lat':{$exists: true}, 'address.lng':{$exists: true}}).fetch();
+                
+            for (var i in r) {
+                if (r[i].address && r[i].address.lat && r[i].address.lng) {
+                    Markers.insert({
+                        lat: r[i].address.lat,
+                        lng: r[i].address.lng,
+                        userId: Meteor.userId()
+                    });
+                }
+            }
         }
     });
 
@@ -39,6 +58,8 @@ export default function(Template) {
 
     Template.Map.created = function() {
         this.subscribe('Markers');
+        this.subscribe('Resources');
+        window.Resources = Resources;
     }
 
     Meteor.startup(function() {
