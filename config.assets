@@ -1,0 +1,12 @@
+{
+    "appIcons": {
+        "source": "private/icon.png",
+        "output": "resources/icons/",
+        "type": ["ios", "android", "chromeext", "mac"]
+    },
+    "webIcons": {
+        "source": "private/icon.png",
+        "output": "public/assets/images/favicon/",
+        "type": ["favicon"]
+    }
+}
