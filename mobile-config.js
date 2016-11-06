@@ -24,7 +24,7 @@ App.setPreference('Orientation', 'unspecified', 'android');
 
 App.icons({
 	// iOS
-	'iphone_2x': 'resources/icon-40@3x.png' // (120x120)
+	'iphone_2x': 'resources/icon-40@3x.png', // (120x120)
 	'iphone_3x': 'resources/icon-60@3x.png', // (180x180)
 	'ipad': 'resources/icon-76.png', // (76x76)
 	'ipad_2x': 'resources/icon-76@2x.png', // (152x152)
@@ -40,6 +40,6 @@ App.icons({
 	'android_mdpi': 'resources/drawable-mdpi/icon.png',
 	'android_hdpi': 'resources/drawable-hdpi/icon.png',
 	'android_xhdpi': 'resources/drawable-xhdpi/icon.png',
-	'android_xxhdpi': 'resources/drawable-xxhdpi/icon.png'
+	'android_xxhdpi': 'resources/drawable-xxhdpi/icon.png',
 	'android_xxxhdpi': 'resources/drawable-xxxhdpi/icon.png'
 });
