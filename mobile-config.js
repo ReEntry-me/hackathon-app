@@ -22,6 +22,12 @@ App.info({
 App.setPreference('Orientation', 'all', 'ios');
 App.setPreference('Orientation', 'unspecified', 'android');
 
+App.setPreference('StatusBarOverlaysWebView', 'false');
+App.setPreference('StatusBarStyle', 'default');
+App.setPreference('StatusBarBackgroundColor', '#f9f9f9');
+App.setPreference('AutoHideSplashScreen', 'true');
+App.setPreference('ShowSplashScreenSpinner', 'false');
+
 App.icons({
 	// iOS
 	'iphone_2x': 'resources/icon-40@3x.png', // (120x120)
