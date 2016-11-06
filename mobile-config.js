@@ -24,7 +24,7 @@ App.setPreference('Orientation', 'unspecified', 'android');
 
 App.setPreference('StatusBarOverlaysWebView', 'false');
 App.setPreference('StatusBarStyle', 'default');
-App.setPreference('StatusBarBackgroundColor', '#f9f9f9');
+App.setPreference('StatusBarBackgroundColor', '#1b1c1d');
 App.setPreference('AutoHideSplashScreen', 'true');
 App.setPreference('ShowSplashScreenSpinner', 'false');
 

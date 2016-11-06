@@ -4,7 +4,9 @@
   "description": "Connecting parolees with resources",
   "main": "index.js",
   "dependencies": {
-    "bcrypt": "^0.8.7"
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "meteor-node-stubs": "^0.2.3"
   },
   "devDependencies": {},
   "scripts": {

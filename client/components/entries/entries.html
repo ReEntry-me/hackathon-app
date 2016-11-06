@@ -1,0 +1,232 @@
+<template name="resources">
+    <div id="resources" class="main-content padding-wrapper" style="height: {{availHeight}}px;">
+        <h1 class="ui header">Resources</h1> 
+        {{#if isUser}}
+            <button class="ui button add-resource green"><i class="fa fa-plus"></i> Add Resource</button>
+            <button class="ui button add-organization green"><i class="fa fa-plus"></i> Add Organization</button>
+        {{/if}}
+        {{#each resources}}
+            <div class="ui segment">
+                {{#each this.organization}}
+                    <div class="ui blue ribbon label">
+                        {{getOrgName}}
+                    </div>
+                {{/each}}
+                {{#if isUser}}
+                    <div class="ui right floated vertical labeled icon buttons">
+                        {{#if isAdmin}}
+                            {{#unless active}}
+                            <button class="ui button positive approve">
+                                <i class="check icon"></i> Approve
+                            </button>
+                            {{/unless}}
+                        {{/if}}
+                        <button class="ui button edit">
+                            <i class="edit icon"></i> Edit
+                        </button>
+                        {{#if isAdmin}}
+                            <button class="ui button negative remove">
+                                <i class="remove icon"></i> Remove
+                            </button>
+                        {{/if}}
+                    </div>
+                {{/if}}
+                <h2 class="ui header">{{name}} {{#if isSaved}}<i class="star icon yellow unsave"></i>{{else}}<i class="empty star icon save"></i>{{/if}}</h2>
+                {{#if description}}<p>{{description}}</p>{{/if}}
+
+                <div class="ui cards">
+                    {{#if phone}}
+                        <div class="card">
+                            <div class="content">
+                                <div class="header"><i class="call icon"></i> Phone</div>
+                                <div class="description">
+                                    {{phoneFormat phone}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if website}}
+                        <div class="card">
+                            <div class="content">
+                                <div class="header"><i class="world icon"></i> Website</div>
+                                <div class="description">
+                                    <a href="{{website}}">{{webFormat website}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if address}}
+                        <div class="card">
+                            <div class="content">
+                                <div class="header"><i class="map outline icon"></i> Address</div>
+                                <div class="description">
+                                    {{address.street}}
+                                    <br> {{address.city}}, {{address.state}} {{address.zip}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if areaServed}}
+                        <div class="card">
+                            <div class="content">
+                                <div class="header"><i class="map marker icon"></i> Areas Served</div>
+                                <div class="description">
+                                    <div class="ui list">
+                                        {{#each areaServed}}
+                                        <div class="item">
+                                            <div class="content">
+                                                {{address.fullAddress}}
+                                            </div>
+                                        </div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</template>
+
+<template name="organizations">
+    <div id="organizations" class="main-content padding-wrapper">
+        <h1 class="ui header">Organizations</h1> 
+        {{#if isUser}}
+            <button class="ui button add-resource green"><i class="fa fa-plus"></i> Add Resource</button>
+            <button class="ui button add-organization green"><i class="fa fa-plus"></i> Add Organization</button>
+        {{/if}}
+        {{#each organizations}}
+            <div class="ui segment">
+                <a class="ui left corner label">
+                    <i class="flag icon"></i>
+                </a>
+                {{#if isUser}}
+                    <div class="ui right floated vertical labeled icon buttons">
+                        {{#if isAdmin}}
+                            {{#unless active}}
+                            <button class="ui button positive approve">
+                                <i class="check icon"></i> Approve
+                            </button>
+                            {{/unless}}
+                        {{/if}}
+                        <button class="ui button edit">
+                            <i class="edit icon"></i> Edit
+                        </button>
+                        {{#if isAdmin}}
+                            <button class="ui button negative remove">
+                                <i class="remove icon"></i> Remove
+                            </button>
+                        {{/if}}
+                    </div>
+                {{/if}}
+                <h2 class="ui header">{{name}} {{#if isSaved}}<i class="star icon yellow unsave"></i>{{else}}<i class="empty star icon save"></i>{{/if}}</h2>
+                {{#if description}}<p>{{description}}</p>{{/if}}
+
+                <div class="ui cards">
+                    {{#if phone}}
+                        <div class="card">
+                            <div class="content">
+                                <div class="header"><i class="call icon"></i> Phone</div>
+                                <div class="description">
+                                    {{phoneFormat phone}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if website}}
+                        <div class="card">
+                            <div class="content">
+                                <div class="header"><i class="world icon"></i> Website</div>
+                                <div class="description">
+                                    <a href="{{website}}">{{webFormat website}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if address}}
+                        <div class="card">
+                            <div class="content">
+                                <div class="header"><i class="map outline icon"></i> Address</div>
+                                <div class="description">
+                                    {{address.street}}
+                                    <br> {{address.city}}, {{address.state}} {{address.zip}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if areaServed}}
+                        <div class="card">
+                            <div class="content">
+                                <div class="header"><i class="map marker icon"></i> Areas Served</div>
+                                <div class="description">
+                                    <div class="ui list">
+                                        {{#each areaServed}}
+                                        <div class="item">
+                                            <div class="content">
+                                                {{address.fullAddress}}
+                                            </div>
+                                        </div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                </div>
+                <div class="ui cards">
+                {{#each orgResources _id}}
+                    <div class="card yellow">
+                        <div class="content">
+                            <div class="header">{{name}}</div>
+                            {{#if address}}<div class="meta">{{address.fullAddress}}</div>{{/if}}
+                            <div class="description">
+                                {{#if isMultiArea areaServed}}Serving: 
+                                    <div class="ui bulleted list">
+                                    {{#each areaServed}}
+                                        <div class="item">{{address.fullAddress}}</div>
+                                    {{/each}}
+                                    </div>
+                                {{else}}
+                                    Serving {{#each areaServed}}{{address.fullAddress}}{{/each}}
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</template>
+
+<template name="entryEdit">
+    <div class="header">
+        {{mode}} {{entryType}}
+    </div>
+    <div class="ui segment">
+        {{#autoForm collection=entries doc=doc id="entryEditForm" type=type}}
+        <div class="ui teal ribbon label">Name</div>
+        <p>{{> afQuickField name="name" label=false}}</p>
+        <div class="ui teal ribbon label">Description</div>
+        <p>{{> afQuickField name="description" label=false}}</p>
+        <div class="ui teal ribbon label">Address</div>
+        <p>{{> afQuickField name="address" label=false}}</p>
+        <div class="ui teal ribbon label">Area Served</div>
+        <p>{{> afQuickField name="areaServed" label=false}}</p>
+        <div class="ui teal ribbon label">Phone</div>
+        <p>{{> afQuickField name="phone" label=false}}</p>
+        <div class="ui teal ribbon label">Website</div>
+        <p>{{> afQuickField name="website" label=false}}</p>
+        {{#if $eq entryType 'resource'}}
+        <div class="ui teal ribbon label">Organization</div>
+        <p>{{> afQuickField name="organization" label=false}}</p>
+        {{/if}}
+        <div class="ui teal ribbon label">Conditions</div>
+        <p>{{> afQuickField name="conditions" label=false}}</p>
+        <button type="submit" class="ui button green">{{mode}} {{entryType}}</button>
+        <button type="reset" class="ui button red close">Cancel</button>
+        {{/autoForm}}
+    </div>
+</template>

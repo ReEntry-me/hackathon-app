@@ -6,12 +6,41 @@
     Main Content
    ------------------- */
 
+/* Sticky footer styles
+-------------------------------------------------- */
+html, body {
+  height: auto !important;
+  overflow:hidden;
+}
+
+html {
+    position: relative;
+    min-height: 100%;  
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 5rem !important;
+  
+}
+
+.ui.fixed.menu + .ui.grid {
+    padding-top: 3.75rem !important;
+}
+
+.page-footer {
+  background-color: #1b1c1d;
+  position: absolute;
+  /* bottom: -1rem; */
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 4rem;
+}
+
+
 body, #main {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
     color: @primaryFontColor;
-    font-family: 'Fauna One', serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
 }
 
 a {
@@ -30,25 +59,5 @@ a {
 }
 
 .ui.header {
-    font-family: 'Glegoo', serif;
-}
-
-.site-wrapper {
-    margin: 0 auto;
-    max-width: @largeDesktopWidth;
-}
-
-/* -------------------
-    Footer
-   ------------------- */
-.padding-wrapper.footer {
-    border-radius: 0;
-
-    a {
-        color: @secondaryLinkColor;
-    }
-
-    a:hover {
-        color: @secondaryLinkHoverColor;
-    }
+    font-family: 'Roboto', sans-serif;
 }

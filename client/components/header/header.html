@@ -1,5 +1,48 @@
 <template name="header">
-    <div class="center aligned {{isActive}} header-wrapper">
+    <div id="header" class="ui fixed inverted menu">
+        <div class="ui container">
+            <a href="#" class="header item">
+                {{constant 'name'}}
+            </a>
+            <a class="item home">Home</a>
+            <div class="ui simple dropdown item">
+                Resources <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item near-res" href="#">Near Me</a>
+                    <a class="item saved-res" href="#">Saved</a>
+                    <div class="divider"></div>
+                    <div class="header">Header Item</div>
+                    <div class="item">
+                        <i class="dropdown icon"></i> Sub Menu
+                        <div class="menu">
+                            <a class="item" href="#">Link Item</a>
+                            <a class="item" href="#">Link Item</a>
+                        </div>
+                    </div>
+                    <a class="item resources" href="#">All</a>
+                </div>
+            </div>
+            <div class="ui simple dropdown item">
+                Organizations <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item near-orgs" href="#">Near Me</a>
+                    <a class="item saved-orgs" href="#">Saved</a>
+                    <div class="divider"></div>
+                    <div class="header">Header Item</div>
+                    <div class="item">
+                        <i class="dropdown icon"></i> Sub Menu
+                        <div class="menu">
+                            <a class="item" href="#">Link Item</a>
+                            <a class="item" href="#">Link Item</a>
+                        </div>
+                    </div>
+                    <a class="item organizations" href="#">All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--     <div class="center aligned {{isActive}} header-wrapper">
         <h1 class="huge center aligned main ui header">
             {{constant 'name'}}
             <div class="sub header">
@@ -24,7 +67,5 @@
             {{else}} {{> atForm }} {{/if}}
         </div>
         {{/if}}
-    </div>
-    {{> resourceAddButton}}
-    {{> resourceEditButton}}
+    </div> -->
 </template>

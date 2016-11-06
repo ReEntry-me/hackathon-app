@@ -1,0 +1,17 @@
+<template name="Map">
+    <div class="segment">
+    	<div class="map-container" style="height: {{mapHeight}}px; margin-top: {{mapMargin}}px;">
+        {{> googleMap name="map" options=mapOptions}}
+        </div>
+    </div>
+    <div class="ui secondary segment map-buttons">
+        <div class="ui labeled button clearMap">
+            <a class="ui basic red right pointing label">
+    			{{markersCount}}
+  			</a>
+            <div class="ui red button">
+                <i class="trash icon"></i> Clear Map
+            </div>
+        </div>
+    </div>
+</template>

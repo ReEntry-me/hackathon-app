@@ -17,6 +17,18 @@ export default function (Template) {
   });
 
   Template['header'].events({
+    'click .home': function() {
+      FlowRouter.go('/');
+    },
+    'click .privacy': function() {
+      FlowRouter.go('/privacy');
+    },
+    'click .resources': function() {
+      FlowRouter.go('/resources');
+    },
+    'click .organizations': function() {
+      FlowRouter.go('/organizations');
+    },
     'click .resize.button' : () => {
       var showLogin = dict.get('showLogin');
 

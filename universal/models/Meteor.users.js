@@ -39,7 +39,10 @@ const profileSchema = new SimpleSchema({
     bio: {
         type: String,
         label: 'Bio',
-        optional: true
+        optional: true,
+        autoform: {
+            rows: 3
+        }
     }
 });
 
@@ -67,6 +70,23 @@ Meteor.users.attachSchema(
             optional: true,
             blackbox: true
         },
+        saves: {
+            type: [String],
+            optional: true
+        },
+        conditions: {
+            type: [String], //FK to Conditions
+            optional: true,
+            autoform: {
+                type: 'selectize',
+                multiple: true
+            }
+        },
+        alerts: {
+            type: [Object],
+            optional: true,
+            blackbox: true
+        },
         createdAt: {
             type: Date,
             denyUpdate: true,
@@ -83,13 +103,7 @@ Meteor.users.attachSchema(
     })
 );
 
-// Collection2 already does schema checking
-if (Meteor.isServer) {
-  Meteor.users.allow({
-    insert : () => false,
-    update : () => false,
-    remove : () => false
-  });
-}
+Meteor.users.permit(['insert', 'update', 'remove']).ifHasRole('admin').allowInClientCode();
+Meteor.users.permit(['update']).exceptProps(['emails', 'services', 'roles', 'alerts']).allowInClientCode();
 
 export default Meteor.users;

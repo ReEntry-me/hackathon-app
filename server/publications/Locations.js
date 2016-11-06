@@ -1,6 +1,0 @@
-// TODO: call this in entry file
-export default function () {
-  Meteor.publish('Locations', function () {
-    return Locations.find();
-  });
-}
