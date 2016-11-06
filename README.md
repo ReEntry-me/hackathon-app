@@ -64,3 +64,10 @@ Read through the [GUIDE.md](https://github.com/matteodem/meteor-boilerplate/blob
 	- (Delete)
 
 
+# HOWTO
+
+## (Re)Build icons
+
+1. Follow install instructions to install [mobicon](https://github.com/SamVerschueren/mobicon)
+2. Run ```mobicon icon.png -p=ios -o=resources``` and ```mobicon icon.png -p=android -o=resources``` from the root directory (where icon.png should be).
+3. Generate favicons using a tool like [realfavicongenerator.net](http://realfavicongenerator.net/). Upload contents of zip file to /public. Modify /client/components/common/head.html as appropriate.
