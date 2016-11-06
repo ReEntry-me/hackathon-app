@@ -10,7 +10,7 @@ App.setPreference('StatusBarBackgroundColor', '#FFFFFF');
 App.setPreference('BackupWebStorage','local');
 
 App.info({
-  id: 'com.reentry',
+  id: 'me.reentry',
   version: '1.0.0',
   name: 'ReEntry',
   description: 'Resources for parolees',
